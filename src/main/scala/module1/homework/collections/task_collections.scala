@@ -16,7 +16,7 @@ object task_collections {
    *
    * **/
   def capitalizeIgnoringASCII(text: List[String]): List[String] = {
-    text.head :: text.tail.zipWithIndex.map { case (str, index) =>
+    text.head :: text.tail.map { str =>
       if (isASCIIString(str)) str.toUpperCase() else str.toLowerCase()
     }
   }
